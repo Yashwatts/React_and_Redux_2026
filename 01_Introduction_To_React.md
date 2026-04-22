@@ -1,42 +1,40 @@
-1. What is React?
+# Introduction to React
 
-• React is a JavaScript library to build dynamic and interactive user interfaces.
-• Developed at Facebook in 2011.
-• Currently most widely used JS library for front-end development.
-• Used to create Single Page Applications (SPAs), where page does not re-load.
+## 1. What is React?
 
+- React is a JavaScript library for building dynamic and interactive user interfaces.
+- It was developed at Facebook in 2011.
+- It is one of the most widely used JavaScript libraries for front-end development.
+- It is used to create Single Page Applications (SPAs), where the page does not reload.
 
-2. Working of DOM (Document Object Model)
+## 2. Working of DOM (Document Object Model)
 
-• Browser takes HTML and create DOM.
-• JS helps us modify DOM based on user actions or events.
-• In big applications, working with DOM becomes complicated.
+- The browser takes HTML and creates the DOM.
+- JavaScript helps us modify the DOM based on user actions or events.
+- In large applications, working directly with the DOM becomes complicated.
 
+## 3. Problems with JavaScript
 
-3. Problems with JavaScript
+- React has a simpler mental model.
+- JavaScript can be cumbersome.
+- JavaScript is error-prone.
+- JavaScript is hard to maintain.
+- JavaScript itself is not the problem; manual DOM manipulation is.
 
-• React has a simpler mental model
-• JS is cumbersome
-• JS is Error-prone
-• JS is hard to maintain
-• JavaScript itself isn’t the problem — manual DOM manipulation is.
+## 4. Working of React
 
+- You do not need to worry about querying and updating DOM elements.
+- React helps you build pages with small, reusable components.
+- React takes care of creating and updating DOM elements.
+- It saves time because a lot of the work is already handled for you.
 
-4. Working of React
+## 5. JS vs React
 
-• No need to worry about querying and updating DOM elements.
-• React creates a web page with small and reusable components.
-• React will take care of creating and updating DOM elements.
-• It saves a lot of time, things are easier because a lot is already built for you.
+| JavaScript                                                   | React                                                                              |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| Imperative: you define the steps to reach the desired state. | Declarative: you define the target UI state and React figures out how to reach it. |
 
+## 6. Introduction to Components
 
-5. JS vs React
-
-• JS is imperative: You define steps to reach your desired state.
-• React is Declarative: You define the target UI state and then react figures out how to reach that state.
-
-
-6. Introduction to Components
-
-• Components help us write reusable, modular and better organized code.
-• React application is a tree of components with "App Component" as the root bringing everything together. 
+- Components help us write reusable, modular, and better organized code.
+- A React application is a tree of components, with the App component as the root that brings everything together.

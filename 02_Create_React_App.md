@@ -1,61 +1,60 @@
-1. What is IDE?
+# Create a React App
 
-• IDE stands for Integrated Development Environment.
-• Software suite that consolidates basic tools required for software development.
-• Central hub for coding, finding problems and testing.
-• Designed to improve developer efficiency.
+## 1. What is IDE?
 
+- IDE stands for Integrated Development Environment.
+- It is a software suite that consolidates the basic tools required for software development.
+- It is the central hub for coding, finding problems, and testing.
+- It is designed to improve developer efficiency.
 
-2. Need of IDE
+## 2. Need of IDE
 
-• Streamliness development.
-• Increases productivity.
-• Simplifies complex tasks.
-• IDE Features: Code Autocomplete, Syntax Highlighting, Version Control, Error Checking
+- Streamlines development.
+- Increases productivity.
+- Simplifies complex tasks.
+- Common IDE features include code autocomplete, syntax highlighting, version control, and error checking.
 
+## 3. Install Latest Node
 
-3. Install Latest Node
+- Search for and download Node.js.
 
-• Search Download NodeJS
+## 4. Installation & Setup
 
+- Search for VS Code.
+- Keep your software up to date.
 
-4. Installation & Setup
+## 5. VS Code Extensions and Settings
 
-• Search VS Code
-• Keep your software up to date.
+- Live Server or Live Preview.
+- Prettier for format on save.
+- Enable line wrap.
+- Set tab size from 4 to 2.
 
+## 6. Create a React App
 
-5. VSCode Extensions and Settings
+- The official tool is CRA (Create React App).
+- Vite is a modern tool for creating React projects.
+- Vite produces a quick and small bundle size.
+- Use `npm run dev` to launch the Vite development server.
+- Use `npm start` for CRA.
 
-• Live Server / Live Preview
-• Prettier (Format on Save)
-• Line Wrap
-• Tab Size from 4 to 2
+### Steps to create
 
+```bash
+npm create vite@latest
+```
 
-6. Create a React App
+- Project name: `first-react-app`
+- Select a framework: `React`
+- Select a variant: `JavaScript`
 
-• Official tool is CRA (Create React App)
-• Vite is a modern tool to create React project.
-• Vite produces Quick and Small bundle size.
-• Vite: Use npm run dev to launch dev server.
-• Use npm start for CRA.
+## 7. Project Structure
 
-Steps to create:
--> In Terminal,
--> npm create vite@latest
--> Project name: first-react-app
--> Select a framework: React
--> Select a variant: JavaScript
-
-
-7. Project Structure
-
-• node_modules/ has all the installed node packages.
-• public/ Directory: Contains static files that don't change.
-• src/ Directory: Main folder for the React code.
-    1. components/: Reusable parts of the UI, like buttons or headers.
-    2. assets/: Images, fonts and other static files.
-    3. styles/: CSS or stylesheets.
-• package.json contains information about this project like name, version, dependencies on other react packages.
-• vite.config.js contains vite config.
+- `node_modules/` has all the installed node packages.
+- `public/` contains static files that do not change.
+- `src/` is the main folder for the React code.
+  - `components/`: Reusable parts of the UI, like buttons or headers.
+  - `assets/`: Images, fonts, and other static files.
+  - `styles/`: CSS or stylesheets.
+- `package.json` contains information about the project, such as name, version, and dependencies on other React packages.
+- `vite.config.js` contains the Vite configuration.
