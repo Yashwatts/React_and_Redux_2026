@@ -4,7 +4,7 @@
 
 - IDE stands for Integrated Development Environment.
 - It is a software suite that consolidates the basic tools required for software development.
-- It is the central hub for coding, finding problems, and testing.
+- It is the central hub for coding, finding problems and testing.
 - It is designed to improve developer efficiency.
 
 ## 2. Need of IDE
@@ -12,7 +12,7 @@
 - Streamlines development.
 - Increases productivity.
 - Simplifies complex tasks.
-- Common IDE features include code autocomplete, syntax highlighting, version control, and error checking.
+- Common IDE features include code autocomplete, syntax highlighting, version control and error checking.
 
 ## 3. Install Latest Node
 
@@ -54,7 +54,7 @@ npm create vite@latest
 - `public/` contains static files that do not change.
 - `src/` is the main folder for the React code.
   - `components/`: Reusable parts of the UI, like buttons or headers.
-  - `assets/`: Images, fonts, and other static files.
+  - `assets/`: Images, fonts and other static files.
   - `styles/`: CSS or stylesheets.
-- `package.json` contains information about the project, such as name, version, and dependencies on other React packages.
+- `package.json` contains information about the project, such as name, version and dependencies on other React packages.
 - `vite.config.js` contains the Vite configuration.

@@ -24,7 +24,7 @@
 ## 4. Working of React
 
 - You do not need to worry about querying and updating DOM elements.
-- React helps you build pages with small, reusable components.
+- React helps you build pages with small and reusable components.
 - React takes care of creating and updating DOM elements.
 - It saves time because a lot of the work is already handled for you.
 
@@ -36,5 +36,5 @@
 
 ## 6. Introduction to Components
 
-- Components help us write reusable, modular, and better organized code.
-- A React application is a tree of components, with the App component as the root that brings everything together.
+- Components help us write reusable, modular and better organized code.
+- A React application is a tree of components, with the "App component" as the root that brings everything together.
