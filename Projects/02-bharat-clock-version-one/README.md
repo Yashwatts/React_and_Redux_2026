@@ -1,16 +1,53 @@
-# React + Vite
+![Image of Project](src/assets/image.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Bharat Clock Version One
 
-Currently, two official plugins are available:
+This is a beginner React project created with Vite.
+It is the first version of a Bharat Clock UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What We Built
 
-## React Compiler
+1. Created a simple clock app layout using React components.
+2. Added Bootstrap classes for heading and text styling.
+3. Displayed current date and time using JavaScript Date.
+4. Split the UI into small, clear component files.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## File Wise Work
 
-## Expanding the ESLint configuration
+- src/main.jsx
+	- React app entry point.
+	- Renders the main App component.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- src/App.jsx
+	- Main layout component.
+	- Combines ClockHeading, ClockSlogan and CurrentTime.
+	- Imports Bootstrap and App.css.
+
+- src/App.css
+	- Project stylesheet file for custom styling.
+	- Currently empty in this version.
+
+- src/components/ClockHeading.jsx
+	- Shows the main heading: Bharat Clock.
+
+- src/components/ClockSlogan.jsx
+	- Shows the app slogan/description line.
+
+- src/components/CurrentTime.jsx
+	- Creates a Date object.
+	- Displays current date and time using toLocaleDateString and toLocaleTimeString.
+
+## Current Limitation
+
+This is a basic first version.
+We have to refresh the page every time to see updated seconds.
+Also, the current UI looks incomplete.
+
+In upcoming advanced topics, we will learn state and effects to update time continuously.
+
+## Run The Project
+
+```bash
+npm install
+npm run dev
+```
