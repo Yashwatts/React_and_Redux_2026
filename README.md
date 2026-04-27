@@ -15,46 +15,67 @@ It helps you:
 
 By following this repository, you will learn:
 - React fundamentals and project setup using Vite.
-- Creating and organizing React components.
-- Using Bootstrap with React layouts.
+- Creating and organizing React components with JSX.
+- File extensions (.js vs .jsx) and component types (class vs function).
+- Exporting and importing components (default and named exports).
+- Using React Fragments to group elements without extra DOM nodes.
+- Integrating Bootstrap with React for responsive styling.
 - Building beginner apps like a Todo App and a Bharat Clock.
-- Writing basic project documentation and tracking limitations for future improvements.
+- Writing clear project documentation and tracking improvements.
 
 ## Repository Structure and Contents
 
 ```text
 Frontend Development/
-|- 01_Introduction_To_React.md
-|- 02_Create_React_App.md
-|- 03_Creating_React_Components.md
-|- 04_Including_Bootstrap.md
-|- 01_first_react_app/
-|  |- first_react_app/
-|- 02_create_react_component/
-|  |- create-first-component/
-|- 03_Bootstrap/
-|  |- learning-bootstrap/
-|- Projects/
-|  |- 01-todo-app-version-one/
-|  |- 02-bharat-clock-version-one/
+├── 01_first_react_app/
+│   └── first_react_app/
+│       ├── README.md (includes Introduction to React + Create React App)
+│       └── src/
+├── 02_create_react_component/
+│   └── create-first-component/
+│       ├── README.md (includes Creating React Components concepts)
+│       ├── src/Hello.jsx (dynamic components)
+│       ├── src/Random.jsx (reusable components)
+│       └── src/App.jsx (integration)
+├── 03_Bootstrap/
+│   └── learning-bootstrap/
+│       ├── README.md (includes Bootstrap in React concepts)
+│       ├── src/main.jsx
+│       └── src/App.jsx (Bootstrap button examples)
+├── 04_Fragments/
+│   └── learning-fragment/
+│       ├── README.md (Fragments concepts)
+│       └── src/App.jsx (Fragment implementation)
+└── Projects/
+    ├── 01-todo-app-version-one/ (Beginner Todo app)
+    └── 02-bharat-clock-version-one/ (Bharat Clock app)
 ```
 
-What each file/folder contains:
+### Learning Path
 
-- 01_Introduction_To_React.md: Introductory notes on React basics and core concepts.
-- 02_Create_React_App.md: Steps and notes for creating a React app using Vite.
-- 03_Creating_React_Components.md: Notes on building and organizing React components.
-- 04_Including_Bootstrap.md: Notes on integrating Bootstrap classes in React projects.
-- 01_first_react_app/first_react_app/: First hands-on React starter app.
-- 02_create_react_component/create-first-component/: Practice project for creating and using components.
-- 03_Bootstrap/learning-bootstrap/: Practice project focused on Bootstrap layout and styling.
-- Projects/01-todo-app-version-one/: Beginner Todo app project with component-based UI.
-- Projects/02-bharat-clock-version-one/: Beginner Bharat Clock app showing current date and time.
+**Folder 01 - First React App:**
+- README includes React fundamentals and project setup with Vite
+- Start here to understand React basics and environment setup
+- Read: [01_first_react_app/first_react_app/README.md](01_first_react_app/first_react_app/README.md)
 
-### Notes
-- Markdown files at the root explain each learning topic.
-- Numbered folders contain concept-specific practice apps.
-- Projects folder contains mini apps with dedicated README files.
+**Folder 02 - React Components:**
+- README covers file extensions (.js vs .jsx), component types, JSX, exporting/importing
+- Practical examples with Hello.jsx, Random.jsx, and App.jsx
+- Read: [02_create_react_component/create-first-component/README.md](02_create_react_component/create-first-component/README.md)
+
+**Folder 03 - Bootstrap Styling:**
+- README explains Bootstrap concepts, installation, and integration with React
+- Practical examples with Bootstrap buttons and styling
+- Read: [03_Bootstrap/learning-bootstrap/README.md](03_Bootstrap/learning-bootstrap/README.md)
+
+**Folder 04 - React Fragments:**
+- README covers fragments for grouping multiple elements without extra DOM nodes
+- Practical implementation in App.jsx using short fragment syntax
+- Read: [04_Fragments/learning-fragment/README.md](04_Fragments/learning-fragment/README.md)
+
+**Projects Folder:**
+- Mini apps applying learned concepts
+- Each project has its own README with project-specific documentation
 
 ## Who Is This For?
 
