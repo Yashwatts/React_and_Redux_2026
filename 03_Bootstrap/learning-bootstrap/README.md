@@ -1,16 +1,55 @@
-# React + Vite
+# Including Bootstrap in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is Bootstrap?
 
-Currently, two official plugins are available:
+Bootstrap is a popular open-source CSS framework used to build responsive, mobile-first websites quickly. It provides a large collection of ready-to-use classes and UI components such as buttons, forms, cards, navbars, grids and modals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+In React projects, Bootstrap helps you style components faster without writing all CSS from scratch.
 
-## React Compiler
+## Common Use Cases
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Quickly building clean and responsive user interfaces.
+- Creating dashboards, admin panels and landing pages.
+- Prototyping ideas and MVPs with less design effort.
+- Maintaining consistent UI design across pages.
+- Reducing development time by using prebuilt components.
 
-## Expanding the ESLint configuration
+## Why Bootstrap?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive: Mobile-first design for all device sizes.
+- Components: Pre-styled UI elements like buttons and navbars.
+- Customizable: Default styles can be modified as needed.
+- Cross-browser support: Consistent look across modern browsers.
+- Open-source: Free to use with strong community support.
+
+## Installation
+
+Install Bootstrap in your React project:
+
+```bash
+npm i bootstrap@5.3.8
+```
+
+## Import Bootstrap CSS
+
+Import Bootstrap CSS in your React entry file:
+
+```jsx
+import "bootstrap/dist/css/bootstrap.min.css";
+```
+
+## Practical Work Done in This Folder
+
+For practical understanding, visit these files:
+
+- Dependency installation proof in package file:
+  [package.json](package.json)
+- Bootstrap CSS import in entry file:
+  [src/main.jsx](src/main.jsx)
+- Bootstrap button code usage in app component:
+  [src/App.jsx](src/App.jsx)
+
+## Reference Documentation
+
+- Bootstrap 5.3 Getting Started:
+  [https://getbootstrap.com/docs/5.3/getting-started/introduction/](https://getbootstrap.com/docs/5.3/getting-started/introduction/)

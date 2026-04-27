@@ -77,3 +77,24 @@ function App() {
 ```
 
 The fragment wrapper is removed during rendering, keeping your DOM clean and your styles working correctly.
+
+## Practical Work Done in This Folder
+
+For hands-on understanding, visit these files:
+
+- **App.jsx**: Implementation of Fragment syntax with Bootstrap styling
+  - Uses short Fragment syntax `<>...</>` to group `<h1>` and `<ul>` elements
+  - Demonstrates the practical use case from above
+  - Includes Bootstrap classes like `list-group` and `list-group-item` for styling
+  - Link: [src/App.jsx](src/App.jsx)
+
+- **main.jsx**: Entry point where the App component is rendered
+  - Shows how the component is mounted to the DOM
+  - Link: [src/main.jsx](src/main.jsx)
+
+- **package.json**: Dependencies used in this project
+  - Bootstrap 5.3.8 for styling
+  - React and React DOM for the framework
+  - Link: [package.json](package.json)
+
+**Key Takeaway:** Fragments combined with Bootstrap provide a clean way to structure and style multiple elements without adding extra DOM nodes.
