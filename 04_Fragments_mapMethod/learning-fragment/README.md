@@ -98,3 +98,52 @@ For hands-on understanding, visit these files:
   - Link: [package.json](package.json)
 
 **Key Takeaway:** Fragments combined with Bootstrap provide a clean way to structure and style multiple elements without adding extra DOM nodes.
+
+
+---
+
+# Map Method in React
+
+## 1. Purpose
+
+- Render lists dynamically from array data.
+
+## 2. JSX Elements with map
+
+- Transform each array item into JSX.
+
+```jsx
+{items.map((item) => (
+  <li key={item.id}>{item.name}</li>
+))}
+```
+
+## 3. Inline Rendering
+
+- The map method is commonly used directly inside JSX.
+- This keeps list rendering clean and readable.
+
+## 4. Key Prop
+
+- Assign a unique key to each rendered item.
+
+```jsx
+<div key={item.id}>{item.name}</div>
+```
+
+- Keys help React optimize re-rendering.
+- If key is missing, React shows a warning in the console.
+- Missing keys can reduce rendering performance and make updates less efficient.
+
+## 5. Practical in This Project
+
+- In this project, the map method is used in [src/App.jsx](src/App.jsx) to render the food list dynamically.
+- Each list item is rendered with a unique key:
+
+```jsx
+{foodItems.map((item) => (
+  <li key={item} className="list-group-item">
+    {item}
+  </li>
+))}
+```
