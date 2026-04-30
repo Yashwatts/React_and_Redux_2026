@@ -75,3 +75,73 @@ function App() {
 ```
 
 The `FoodItems` component loops through the array and renders each value as a separate list item, while `ErrorMessage` shows a message when the list is empty.
+
+---
+
+# CSS Modules
+
+A React learning project demonstrating CSS Modules for scoped, component-specific styling.
+
+## What are CSS Modules?
+
+**CSS Modules** are stylesheets where all class names and animations are scoped locally to a component by default. This prevents naming conflicts and allows styles to be tightly coupled with components.
+
+### Key Characteristics
+
+- **Scoped class names** - Each class is unique to its component, avoiding global conflicts
+- **Locally scoped** - Styles are only applied to the component importing them
+- **Unique naming** - CSS modules automatically generate unique class names at build time
+- **Component-specific** - Promotes modular and maintainable styling
+
+## Why Use CSS Modules?
+
+- **Avoid naming conflicts** - No need to worry about class name collisions globally
+- **Better organization** - Keep styles with their components
+- **Reusable components** - Safe to copy components without style conflicts
+- **Maintainability** - Easy to modify styles without affecting other parts of the app
+- **Flexibility** - Can be used alongside global CSS when needed
+
+## How CSS Modules Work
+
+### 1. Create a CSS Module File
+
+```css
+/* Item.module.css */
+.my-item {
+  background-color: khaki;
+  padding: 10px;
+  border-radius: 4px;
+}
+```
+
+### 2. Import in Component
+
+```jsx
+import styles from './Item.module.css';
+
+export default function Item() {
+  return <li className={styles.my-item}>Food Item</li>;
+}
+```
+
+### 3. Generated Output
+
+The build tool automatically transforms the class name to a unique identifier:
+
+```css
+/* Generated in browser */
+._my-item_j3xk {
+  background-color: khaki;
+  padding: 10px;
+  border-radius: 4px;
+}
+```
+
+## Practical Work Done in This Folder
+
+For practical understanding, visit these files:
+
+- Component using CSS modules for scoped styling:
+  [src/components/Item.jsx](src/components/Item.jsx)
+- CSS module file with scoped styles:
+  [src/components/Item.module.css](src/components/Item.module.css)
