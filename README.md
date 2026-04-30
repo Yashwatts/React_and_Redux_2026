@@ -16,10 +16,12 @@ It helps you:
 By following this repository, you will learn:
 - React fundamentals and project setup using Vite.
 - Creating and organizing React components with JSX.
-- File extensions (.js vs .jsx) and component types (class vs function).
+- File extensions (.js vs .jsx), component types and reusable component patterns.
 - Exporting and importing components (default and named exports).
 - Using React Fragments to group elements without extra DOM nodes.
+- Rendering lists with the map method and handling conditional UI.
 - Integrating Bootstrap with React for responsive styling.
+- Passing data with props and styling components with CSS Modules.
 - Building beginner apps like a Todo App and a Bharat Clock.
 - Writing clear project documentation and tracking improvements.
 
@@ -42,10 +44,15 @@ Frontend Development/
 │       ├── README.md (includes Bootstrap in React concepts)
 │       ├── src/main.jsx
 │       └── src/App.jsx (Bootstrap button examples)
-├── 04_Fragments/
+├── 04_Fragments_mapMethod_conditionalRendering/
 │   └── learning-fragment/
-│       ├── README.md (Fragments concepts)
-│       └── src/App.jsx (Fragment implementation)
+│       ├── README.md (Fragments, map method and conditional rendering)
+│       └── src/App.jsx (fragment and list rendering examples)
+├── 05_Props_CSSModule/
+│   └── learning-props/
+│       ├── README.md (props and CSS Modules concepts)
+│       ├── src/App.jsx
+│       └── src/components/ (props-based and CSS Module examples)
 └── Projects/
     ├── 01-todo-app-version-one/ (Beginner Todo app)
     └── 02-bharat-clock-version-one/ (Bharat Clock app)
@@ -71,11 +78,18 @@ Frontend Development/
 **Folder 04 - React Fragments:**
 - README covers fragments for grouping multiple elements without extra DOM nodes
 - Practical implementation in App.jsx using short fragment syntax
-- Read: [04_Fragments/learning-fragment/README.md](04_Fragments/learning-fragment/README.md)
+- Read: [04_Fragments_mapMethod_conditionalRendering/learning-fragment/README.md](04_Fragments_mapMethod_conditionalRendering/learning-fragment/README.md)
+
+**Folder 05 - Props and CSS Modules:**
+- README covers passing data with props and styling components with CSS Modules
+- Practical examples show parent-to-child data flow and scoped component styles
+- Read: [05_Props_CSSModule/learning-props/README.md](05_Props_CSSModule/learning-props/README.md)
 
 **Projects Folder:**
 - Mini apps applying learned concepts
 - Each project has its own README with project-specific documentation
+- Todo App: [Projects/01-todo-app-version-one/README.md](Projects/01-todo-app-version-one/README.md)
+- Bharat Clock: [Projects/02-bharat-clock-version-one/README.md](Projects/02-bharat-clock-version-one/README.md)
 
 ## Who Is This For?
 
@@ -105,4 +119,4 @@ If you like this repository, give it a star ⭐.
 
 This is an active learning repository.
 Some projects are intentionally basic and include hardcoded data in early versions.
-Those areas will be improved in upcoming versions using advanced React concepts such as props, state and effects.
+Those areas will be improved in upcoming versions using advanced React concepts.
