@@ -147,3 +147,84 @@ For hands-on understanding, visit these files:
   </li>
 ))}
 ```
+
+---
+
+# Conditional Rendering in React
+
+## What is Conditional Rendering?
+
+Conditional rendering means showing different UI based on a condition. It helps make the interface dynamic and responsive to state or props.
+
+## Why Use It?
+
+- Show content only when needed.
+- Hide or display elements based on application state.
+- Improve user experience by making the UI react to changes.
+
+## Common Methods
+
+### 1. If-else statement
+
+Use this when you want to choose between two blocks of UI.
+
+```jsx
+if (foodItems.length === 0) {
+  return <h3>I am still hungry</h3>;
+}
+```
+
+### 2. Ternary operator
+
+Use this for simple either/or rendering.
+
+```jsx
+{foodItems.length === 0 ? <h3>I am still hungry</h3> : null}
+```
+
+### 3. Logical AND operator
+
+Use this when you want to render something only if a condition is true.
+
+```jsx
+{foodItems.length === 0 && <h3>I am still hungry</h3>}
+```
+
+## Benefits
+
+- Enhances user experience.
+- Reduces unnecessary rendering.
+- Makes apps more interactive and responsive.
+
+## Practical Work Done in This Folder
+
+In `src/App.jsx`, conditional rendering is practiced in these ways:
+
+- If-else approach is shown in commented code.
+- Ternary operator is used to store `emptyMessage`.
+- Logical AND is shown in commented JSX.
+
+### Example from the project
+
+```jsx
+let emptyMessage = foodItems.length === 0 ? <h3>I am still hungry</h3> : null;
+
+return (
+  <>
+    <h1>Healthy Food</h1>
+    {emptyMessage}
+    <ul className="list-group">
+      {foodItems.map((item) => (
+        <li key={item} className="list-group-item">
+          {item}
+        </li>
+      ))}
+    </ul>
+  </>
+);
+```
+
+## Key Takeaway
+
+- Conditional rendering lets you control what appears on the screen based on a condition.
+- Use if-else, ternary or logical AND depending on the situation.
