@@ -145,3 +145,133 @@ For practical understanding, visit these files:
   [src/components/Item.jsx](src/components/Item.jsx)
 - CSS module file with scoped styles:
   [src/components/Item.module.css](src/components/Item.module.css)
+
+---
+
+# Passing Children
+
+A React learning project demonstrating how to pass content as children to components, enabling flexible and reusable component composition.
+
+## What are Children?
+
+**Children** in React refer to content passed between opening and closing tags of a component. The `children` prop is a special prop that allows you to pass JSX elements, text, or other React components to a child component, making it a container or wrapper component.
+
+> 💡 **Key Points:**
+> - **children is a special prop** for passing elements into components
+> - **Accessed with `props.children`** to render the passed content
+
+### Key Characteristics
+
+- **Special built-in prop** - `children` is automatically available to all components
+- **Flexible content** - Accept any React elements, text, or combinations
+- **Wrapper components** - Useful for creating layout or container components
+- **Composition over inheritance** - Enables flexible component composition patterns
+
+## Why Use Children?
+
+- **Flexible components** - Create generic wrapper or layout components
+- **Composition** - Build complex UIs by composing smaller components
+- **Reusability** - Same component can wrap different content
+- **Cleaner API** - More intuitive than passing content as named props
+- **Layout flexibility** - Easily create card, modal, panel, or container components
+
+## How Children Work
+
+### 1. Accessing Children
+
+```jsx
+// Parent component passing content as children
+<Card>
+  <h2>Hello</h2>
+  <p>This is card content</p>
+</Card>
+
+// Child component receiving children
+function Card({ children }) {
+  return (
+    <div className="card">
+      <div className="card-body">
+        {children}
+      </div>
+    </div>
+  );
+}
+```
+
+### 2. Rendering Children
+
+```jsx
+// Simple wrapper component
+function Wrapper({ children }) {
+  return <div className="wrapper">{children}</div>;
+}
+
+// Using the component
+<Wrapper>
+  <p>This content is wrapped!</p>
+</Wrapper>
+```
+
+### Key Points
+
+- **Children are passed implicitly** - No need to explicitly name them
+- **Available via the `children` prop** - Access using destructuring or `props.children`
+- **Can be any content** - Text, elements, components, or even functions (render props pattern)
+- **Composition enabler** - Allows building flexible, reusable wrapper components
+
+## Practical Work Done in This Folder
+
+### Container Component Example
+
+A practical example of passing children is implemented using the `Container` component:
+
+**Container Component** - [src/components/Container.jsx](src/components/Container.jsx)
+
+```jsx
+import styles from "./Container.module.css";
+
+const Container = (props) => {
+  return <div className={styles.container}>{props.children}</div>;
+};
+
+export default Container;
+```
+
+This is a simple wrapper component that:
+- Accepts any content passed between its opening and closing tags as `children`
+- Renders the children inside a styled `<div>` with CSS module styling
+- Can be reused multiple times to wrap different content
+
+**Usage in App Component** - [src/App.jsx](src/App.jsx)
+
+```jsx
+function App() {
+  let foodItems = ["Dal", "Green Vegetables", "Roti", "Salad", "Milk", "Ghee"];
+
+  return (
+    <>
+      <Container>
+        <h1 className="food-heading">Healthy Food</h1>
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems items={foodItems}></FoodItems>
+      </Container>
+
+      <Container>
+        <p>
+          Above is the list of healthy foods that are good for your health and
+          well being.
+        </p>
+      </Container>
+    </>
+  );
+}
+```
+
+### How It Works
+
+1. **First Container** wraps the heading, error message, and food items list
+2. **Second Container** wraps a descriptive paragraph
+3. Both containers automatically style their children with the same CSS module styling (`Container.module.css`)
+4. The `children` prop allows the same component to be reused with different content
+
+This demonstrates how children enable **flexible and reusable component composition** — the `Container` component doesn't need to know what content it will receive; it simply wraps and styles whatever is passed to it.
