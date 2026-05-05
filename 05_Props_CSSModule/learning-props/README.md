@@ -275,3 +275,91 @@ function App() {
 4. The `children` prop allows the same component to be reused with different content
 
 This demonstrates how children enable **flexible and reusable component composition** — the `Container` component doesn't need to know what content it will receive; it simply wraps and styles whatever is passed to it.
+
+---
+
+# Handling Events
+
+A React learning project demonstrating how to handle user interactions with event handlers in components.
+
+## What are Events?
+
+**Events** in React are user actions such as clicking buttons or typing in inputs. React lets you respond to these actions using event handler functions.
+
+### Key Characteristics
+
+- **CamelCase event names** - React uses `onClick`, `onChange`, and similar handlers
+- **Synthetic events** - React wraps browser events with its own event system
+- **Handler functions** - Event logic is usually placed inside a function
+- **Common for forms and buttons** - Useful for inputs, clicks and other interactions
+
+## Why Use Event Handlers?
+
+- **User interaction** - Respond to clicks, typing and other actions
+- **Dynamic behavior** - Update the UI based on user input
+- **Cleaner code** - Keep logic inside named functions instead of inline code
+- **Reusable logic** - Reuse the same handler in multiple places when needed
+
+## How Events Work
+
+### 1. Handling Button Clicks
+
+```jsx
+const handleBuyButtonClicked = (event) => {
+  console.log(event);
+  console.log(`${foodItem} being bought`);
+};
+
+<button onClick={(event) => handleBuyButtonClicked(event)}>
+  Buy
+</button>
+```
+
+### 2. Handling Input Changes
+
+```jsx
+const handleOnChange = (event) => {
+  console.log(event.target.value);
+};
+
+<input type="text" onChange={handleOnChange} />
+```
+
+### Key Points
+
+- **onClick** is used for button clicks and similar actions
+- **onChange** is used when input values change
+- **Event object** gives access to details like `event.target.value`
+- **Handlers can be arrow functions or normal functions**
+
+## Practical Work Done in This Folder
+
+For practical understanding, visit these files:
+
+- Button click event handling in the food item component:
+  [src/components/Item.jsx](src/components/Item.jsx)
+- Input change event handling in the food input component:
+  [src/components/FoodInput.jsx](src/components/FoodInput.jsx)
+- App component that combines props, children and event-handling examples:
+  [src/App.jsx](src/App.jsx)
+
+## Example
+
+This project uses event handlers to respond to user actions in the UI:
+
+```jsx
+function Item({ foodItem }) {
+  const handleBuyButtonClicked = (event) => {
+    console.log(event);
+    console.log(`${foodItem} being bought`);
+  };
+
+  return (
+    <button onClick={(event) => handleBuyButtonClicked(event)}>
+      Buy
+    </button>
+  );
+}
+```
+
+The `FoodInput` component uses `onChange` to read the current input value, while `Item` uses `onClick` to handle button clicks. This makes the app interactive and shows how React event handlers connect UI actions to JavaScript logic.
