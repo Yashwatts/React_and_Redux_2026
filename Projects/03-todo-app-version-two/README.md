@@ -1,56 +1,53 @@
 ![Image of Project](src/assets/image.png)
 
-# Todo App Version One
+# Todo App Version Two
 
-This is a beginner React project created with Vite.
-It is the first version of a Todo App UI.
+This is an updated beginner React project created with Vite — Version Two of the Todo App UI.
 
 ## What We Built
 
-1. Created a Todo App layout using React components.
-2. Added Bootstrap for grid and button styling.
-3. Added custom CSS for spacing, heading and button sizing.
-4. Split the UI into reusable component files.
+1. A Todo App layout composed from small React components.
+2. Bootstrap for grid and button styling.
+3. Component-level CSS using CSS Modules for scoped styles.
+4. Reusable components and props-based rendering to avoid repetition.
 
 ## File Wise Work
 
 - src/main.jsx
-	- React app entry point.
-	- Imports Bootstrap CSS.
-	- Renders the main App component.
+	- React app entry point. Imports Bootstrap CSS and renders `App`.
 
 - src/App.jsx
 	- Main layout component.
-	- Combines AppName, AddTodo, TodoItem1 and TodoItem2.
-	- Wraps todo items in an items container.
+	- Holds a `todoItems` array and passes it to `TodoItems`.
 
 - src/App.css
-	- Styles heading size and weight.
-	- Makes inputs full width.
-	- Adds spacing using my-row class.
-	- Sets minimum width for buttons with my-button.
+	- App-level styles (container spacing, global helpers used by components).
 
 - src/components/AppName.jsx
-	- Shows the title: TODO App.
+	- Shows the title using a CSS Module (`AppName.module.css`).
 
 - src/components/AddTodo.jsx
-	- Input section for todo text and due date.
-	- Add button UI (no functionality yet).
+	- Input section for todo text and due date with an Add button (UI only).
 
-- src/components/TodoItem1.jsx
-	- Displays one hardcoded todo item.
-	- Shows todo name, date and delete button.
+- src/components/TodoItem.jsx
+	- Single reusable todo item component that receives `todoName` and `todoDate` as props.
 
-- src/components/TodoItem2.jsx
-	- Displays second hardcoded todo item.
-	- Same structure as TodoItem1.
+- src/components/TodoItems.jsx
+	- Container that maps over an array of todo objects and renders `TodoItem` for each.
+	- Uses `TodoItems.module.css` for scoped layout of the items list.
 
-## Current Limitation
+## What's New in Version Two (compared to Version One)
 
-This project is currently hardcoded.
-Todo items are written again and again in separate components (TodoItem1 and TodoItem2).
+- Replaced duplicated components (`TodoItem1.jsx`, `TodoItem2.jsx`) with a single reusable `TodoItem.jsx`.
+- Added `TodoItems.jsx` which maps over a data array to render items instead of hardcoding each one.
+- Introduced CSS Modules (`AppName.module.css`, `TodoItems.module.css`) for component-scoped styles.
+- `App.jsx` now contains a `todoItems` data array and demonstrates passing props to child components.
+- Overall reduced repetition and improved component reusability and structure.
 
-In upcoming advanced topics, we will remove this repetition by using props and reusable components.
+## Current Limitations
+
+- The Add and Delete buttons are UI-only and do not modify state yet.
+- Data is still hardcoded in `App.jsx` (an array) — next steps would add state and persistence.
 
 ## Run The Project
 
