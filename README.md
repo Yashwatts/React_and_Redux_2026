@@ -22,6 +22,7 @@ By following this repository, you will learn:
 - Rendering lists with the map method and handling conditional UI.
 - Integrating Bootstrap with React for responsive styling.
 - Passing data with props and styling components with CSS Modules.
+- Passing content with children and handling basic React events.
 - Building beginner apps like a Todo App and a Bharat Clock.
 - Writing clear project documentation and tracking improvements.
 
@@ -50,12 +51,14 @@ Frontend Development/
 │       └── src/App.jsx (fragment and list rendering examples)
 ├── 05_Props_CSSModule/
 │   └── learning-props/
-│       ├── README.md (props and CSS Modules concepts)
+│       ├── README.md (props, CSS Modules, children and event handling)
 │       ├── src/App.jsx
 │       └── src/components/ (props-based and CSS Module examples)
 └── Projects/
     ├── 01-todo-app-version-one/ (Beginner Todo app)
-    └── 02-bharat-clock-version-one/ (Bharat Clock app)
+    ├── 02-bharat-clock-version-one/ (Bharat Clock app)
+    ├── 03-todo-app-version-two/ (Todo app with props and reusable components)
+    └── 04-calculator-version-one/ (Calculator UI app)
 ```
 
 ### Learning Path
@@ -81,8 +84,8 @@ Frontend Development/
 - Read: [04_Fragments_mapMethod_conditionalRendering/learning-fragment/README.md](04_Fragments_mapMethod_conditionalRendering/learning-fragment/README.md)
 
 **Folder 05 - Props and CSS Modules:**
-- README covers passing data with props and styling components with CSS Modules
-- Practical examples show parent-to-child data flow and scoped component styles
+- README covers passing data with props, CSS Modules, children and event handling
+- Practical examples show parent-to-child data flow, scoped component styles, composition and event handling
 - Read: [05_Props_CSSModule/learning-props/README.md](05_Props_CSSModule/learning-props/README.md)
 
 **Projects Folder:**
@@ -90,6 +93,8 @@ Frontend Development/
 - Each project has its own README with project-specific documentation
 - Todo App: [Projects/01-todo-app-version-one/README.md](Projects/01-todo-app-version-one/README.md)
 - Bharat Clock: [Projects/02-bharat-clock-version-one/README.md](Projects/02-bharat-clock-version-one/README.md)
+- Todo App Version Two: [Projects/03-todo-app-version-two/README.md](Projects/03-todo-app-version-two/README.md)
+- Calculator: [Projects/04-calculator-version-one/calculator/README.md](Projects/04-calculator-version-one/calculator/README.md)
 
 ## Who Is This For?
 
