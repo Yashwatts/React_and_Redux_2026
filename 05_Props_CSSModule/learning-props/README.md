@@ -280,6 +280,8 @@ This demonstrates how children enable **flexible and reusable component composit
 
 # Handling Events
 
+![Diagram](src/assets/image.png)
+
 A React learning project demonstrating how to handle user interactions with event handlers in components.
 
 ## What are Events?
@@ -363,3 +365,103 @@ function Item({ foodItem }) {
 ```
 
 The `FoodInput` component uses `onChange` to read the current input value, while `Item` uses `onClick` to handle button clicks. This makes the app interactive and shows how React event handlers connect UI actions to JavaScript logic.
+
+
+---
+
+# Passing Functions via Props
+
+![Diagram](src/assets/image2.png)
+
+A React learning topic showing how a parent component can pass function references to child components for handling events and interactions.
+
+## What is Passing Functions via Props?
+
+Passing functions via props means sending a function from a parent component to a child component, then calling that function inside the child (usually on an event like click or change).
+
+### Key Characteristics
+
+- **Dynamic behavior sharing** - Move action logic from child to parent when needed
+- **Upward communication pattern** - Child can trigger parent-defined behavior
+- **Event-driven usage** - Common with `onClick`, `onChange`, and form events
+- **Reusable child components** - Child receives behavior as a prop instead of hardcoding logic
+
+## Why Use It?
+
+- **Separation of concerns** - UI in child, business logic in parent
+- **Reusability** - Same child component can perform different actions
+- **Parent control** - Parent decides what should happen on user interaction
+- **Better composition** - Easier to connect components in larger UIs
+
+## How It Works
+
+### 1. Parent Defines Function and Passes It
+
+```jsx
+function App() {
+  const handleOnChange = (event) => {
+    console.log(event.target.value);
+  };
+
+  return <FoodInput handleOnChange={handleOnChange} />;
+}
+```
+
+### 2. Child Receives Function as Prop
+
+```jsx
+const FoodInput = ({ handleOnChange }) => {
+  return <input type="text" onChange={handleOnChange} />;
+};
+```
+
+### 3. Parent Passes Per-Item Function to Child in a List
+
+```jsx
+<Item
+  key={item}
+  foodItem={item}
+  handleBuyButton={() => console.log(`${item} bought`)}
+/>
+```
+
+### 4. Child Invokes Passed Function
+
+```jsx
+const Item = ({ foodItem, handleBuyButton }) => {
+  return <button onClick={handleBuyButton}>Buy</button>;
+};
+```
+
+### Key Points
+
+- **Parent defines, child calls** - The function is created in parent and invoked in child
+- **Function is passed by reference** - Do not call it immediately while passing
+- **Useful for event handlers** - Keeps event logic flexible and organized
+
+## Practical Work Done in This Folder
+
+For practical understanding, visit these files:
+
+- Parent function definition and prop passing to input component:
+  [src/App.jsx](src/App.jsx)
+- Child input component receiving `handleOnChange` function prop:
+  [src/components/FoodInput.jsx](src/components/FoodInput.jsx)
+- List component passing `handleBuyButton` function prop to each item:
+  [src/components/FoodItems.jsx](src/components/FoodItems.jsx)
+- Item component invoking function prop on button click:
+  [src/components/Item.jsx](src/components/Item.jsx)
+
+## Example
+
+```jsx
+// Parent
+<Item foodItem={item} handleBuyButton={() => console.log(`${item} bought`)} />
+
+// Child
+const Item = ({ foodItem, handleBuyButton }) => {
+  return <button onClick={handleBuyButton}>Buy</button>;
+};
+```
+
+This pattern makes components more interactive and reusable by allowing behavior to be injected through props.
